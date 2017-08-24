@@ -44,18 +44,6 @@ class App extends Component {
     axios.get('http://waze.qlue.id/jakarta/update/0atxn84I3hx2WmNm5ifPDZkJaLERZD9A.json')
     .then(results => {
       this.setState({waze: results.data.alerts})
-      // console.log(this.state.waze);
-      var cities  = [];
-      var all = []
-      var numPeople = this.state.waze.length;
-      for (var i = 0; i < numPeople; i++) {
-          if(cities.indexOf(this.state.waze[i].subtype) == -1){
-              cities.push(this.state.waze[i].subtype);
-              all.push(this.state.waze[i]);
-          }
-      }
-      console.log(cities);
-      console.log(all);
     })
     .catch(err => console.log(err))
   }

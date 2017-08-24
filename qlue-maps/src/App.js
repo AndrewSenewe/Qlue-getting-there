@@ -13,6 +13,7 @@ import tidaldiamondblack from './icons/tidaldiamondblack.png'
 import tidaldiamond from './icons/tidaldiamond.png'
 import tidaldiamondorange from './icons/tidaldiamondorange.png'
 import tidaldiamondred from './icons/tidaldiamondred.png'
+import Buttons from './button'
 import logo from './logo.svg';
 import './App.css';
 
@@ -75,10 +76,7 @@ class App extends Component {
             url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           />
-          <a>
-            <h1>asdas</h1>
-          </a>
-
+          <Buttons onClick={() => this.hideOrShow()}/>
           {
             this.state.waze.map(markerWaze => {
               var wazePostion = [+markerWaze.location.y, +markerWaze.location.x]
